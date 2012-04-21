@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/jmay/.vim'
+let g:netrw_dirhist_2='/home/jmay/hgwork/alternate/webapps/feedback/build'
+let g:netrw_dirhist_3='/usr/lib/python3.2'
+let g:netrw_dirhist_4='/home/jmay/hgwork/hg-hooks'
+let g:netrw_dirhist_5='/home/jmay/hgwork/trunk/webapps/alquemie/WebContent/jsp/subscriberExplorer'
+let g:netrw_dirhist_6='/home/jmay/hgwork/sb-scripts'

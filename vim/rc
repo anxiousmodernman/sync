@@ -1,0 +1,69 @@
+" Global Settings
+
+" Run pathogen to initialize all git submodules in ~/.vim/bundle
+call pathogen#infect()
+
+" Handle plugins and indentation based on filetype
+" (See ~/.vim/plugin and ~/.vim/indent)
+filetype plugin indent on
+set filetype=on
+" Custom filename -> filetype mappings
+augroup filetypedetect 
+    autocmd BufNewFile,BufRead *.cwiki setlocal filetype=confluencewiki 
+augroup END
+
+
+" Default indentation
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set smarttab
+set expandtab
+
+
+" Text settings
+set expandtab
+" Enable paste mode (use with <C-S-v>)
+set pastetoggle=<C-S-b>
+
+
+" Move up and down within lines
+map  <buffer> <silent> <Up> gk
+map  <buffer> <silent> <Down> gj
+
+
+" Buffer tabs
+let g:miniBufExplMapWindowNavVim=1 
+let g:miniBufExplMapWindowNavArrows=1 
+let g:miniBufExplModSelTarget=1 
+
+
+" Toggle mouse
+let g:toggleMouse='a'
+let g:toggleMouseLast=''
+function! ToggleMouse() range
+    if &mouse != g:toggleMouse
+        let g:toggleMouseLast=&mouse
+        let &mouse=g:toggleMouse
+    else
+        let &mouse=g:toggleMouseLast
+    endif
+    set mouse?
+endfunction
+map <C-S-x> :call <SID>ToggleMouse()<CR>
+
+
+" Fast fingers
+command W :w
+command Q :q
+command WQ :wq
+command Wq :wq
+
+
+" NERD tree for file system exploring
+command F :NERDTreeToggle
+
+
+" Task list
+map T :TaskList<CR>
+map Y :TlistToggle<CR>

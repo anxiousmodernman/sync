@@ -1,3 +1,7 @@
 # Lock Files #
 ##############
 *.swp
+
+# Compiled Scripts #
+####################
+*.pyc

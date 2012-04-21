@@ -2,11 +2,11 @@
 set shiftwidth=4
 set tabstop=4
 set softtabstop=4
-set textwidth=70
+" Automatically break line after 70 characters
+"set textwidth=70
 
 " Tab completion
 "set omnifunc=pythoncomplete#Complete
-setlocal omnifunc=pysmell#Complete
 
 " Switch line numbering for easy copy and paste
 nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
